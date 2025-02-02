@@ -1,7 +1,7 @@
 # BidNest 🚀
 
 ## Project Description 📋
-The BidNest is a web application built with Next.js, TypeScript, Convex, and Clerk, providing a seamless platform for users to bid on various items. It allows real-time bidding, user authentication, and smooth UI/UX design to ensure a great user experience.
+BidNest is a web application built with Next.js, TypeScript, Convex, and Clerk, offering a seamless platform for users to bid on various items. It enables real-time bidding, secure user authentication, and provides a smooth UI/UX design to ensure an excellent user experience.
 
 ## Features 🛠️
 - **User Authentication** 🔒: Secure login and registration using Clerk.
@@ -13,41 +13,49 @@ The BidNest is a web application built with Next.js, TypeScript, Convex, and Cle
 
 ## Tech Stack 💻
 - **Next.js**: A powerful React framework for building server-side rendered apps.
-- **TypeScript**: A superset of JavaScript that ensures type safety and better developer experience.
+- **TypeScript**: A superset of JavaScript that ensures type safety and a better developer experience.
 - **Convex**: A cloud database that offers real-time functionality and seamless data management.
 - **Clerk**: A secure user authentication and management service.
 
 ## Progress 📊
-#### **Project Set Up**
- - [ ✅ ] Set Up NextJS TypeScript Project  
-#### **Authentication Set Up**
- - [ ✅ ] Set Up Clerk Auth  
- - [ ✅ ] Custom Sign Up and Sign In Routes  
-#### **Database Set Up**
- - [ ✅ ] Set Up Convex Database  
+#### **Project Setup**
+ - [ ✅ ] Set up Next.js TypeScript project  
+#### **Authentication Setup**
+ - [ ✅ ] Integrated Clerk for authentication  
+ - [ ✅ ] Custom sign-up and sign-in routes  
+#### **Database Setup**
+ - [ ✅ ] Integrated Convex database  
  - [ ✅ ] Configured schema for auction and bidding data  
  - [ ✅ ] Optimized queries for fetching live bidding data  
-#### **Schema Set Up**
- - [ ✅ ] Defined `users`, `auctions`, `bids`, and `notifications` tables 
- - [ ✅ ] Added `index` on `bids` table for querying auction bids by amount efficiently
+#### **Schema Setup**
+ - [ ✅ ] Defined tables for `users`, `auctions`, `bids`, and `notifications` 
+ - [ ✅ ] Added index on `bids` table for efficient querying of auction bids by amount  
 #### **User Queries and Mutations**
- - [ ✅ ] Create User  
- - [ ✅ ] Check Existing User  
- - [ ✅ ] Get User with ClerkID  
- - [ ✅ ] Get All Users Except the Self  
- - [ ✅ ] Get All Users by ClerkID Except the Self  
+ - [ ✅ ] Create user  
+ - [ ✅ ] Check existing user  
+ - [ ✅ ] Get user with ClerkID  
+ - [ ✅ ] Get all users except the current user  
+ - [ ✅ ] Get all users by ClerkID except the current user  
 #### **Auction Queries and Mutations**
- - [ ✅ ] Create Auctions  
- - [ ✅ ] Get All Users Auctions By ClerkID  
- - [ ✅ ] Get All Auctions  
- - [ ✅ ] Get Current Price of Auction  
- - [ ✅ ] Get AuctionID  
- - [ ✅ ] Get Auction By ID  
+ - [ ✅ ] Create auctions  
+ - [ ✅ ] Retrieve auctions by ClerkID  
+ - [ ✅ ] Retrieve all auctions  
+ - [ ✅ ] Get current auction price  
+ - [ ✅ ] Get auction by ID  
 #### **Notification Queries and Mutations**
- - [ ✅ ] Create Notifications  
- - [ ✅ ] Get All Notifications By Clerk ID  
- - [ ✅ ] Delete Notification By ID  
- - [ ✅ ] Create Auction Notification  
+ - [ ✅ ] Create notifications  
+ - [ ✅ ] Retrieve all notifications by ClerkID  
+ - [ ✅ ] Delete notification by ID  
+ - [ ✅ ] Create auction notifications  
+#### **Bid Queries and Mutations**
+ - [ ✅ ] Place bids  
+ - [ ✅ ] Retrieve all bids for an auction  
+ - [ ✅ ] Get current highest bid for an auction  
+ - [ ✅ ] Get all bids by ClerkID  
+#### **ShadCN UI Initialization**
+ - [ ✅ ] Initialized ShadCN UI components  
+ - [ ✅ ] Integrated responsive UI design with Tailwind CSS  
+ - [ ✅ ] Implemented mobile-first design using ShadCN UI components for consistency across devices
 
 ## API References ⚙️
 
@@ -57,8 +65,8 @@ The BidNest is a web application built with Next.js, TypeScript, Convex, and Cle
 
 #### **Commit #2** : [Authentication Setup]
  - Integrated Clerk for secure user authentication  
- - Added custom Sign Up and Sign In routes  
- - Verified session management for Signed In Users  
+ - Added custom sign-up and sign-in routes  
+ - Verified session management for signed-in users  
 
 #### **Commit #3** : [Database Setup]
  - Integrated Convex Database  
@@ -68,16 +76,21 @@ The BidNest is a web application built with Next.js, TypeScript, Convex, and Cle
 
 #### **Commit #4** : [Database Schema Setup]
  - Defined schema for `users`, `auctions`, `bids`, and `notifications`  
- - Added `index` on `bids` table for querying auction bids by amount efficiently  
+ - Added index on `bids` table for efficient querying of auction bids by amount  
  - Integrated notifications for bid status and user engagement  
 
 #### **Commit #5** : [User and Auction Management]
- - Added functionality for user registration and data retrieval
- - Enabled auction creation and management for users
- - Implemented queries for retrieving user-related data and auction details
- - Set up real-time updates for auction prices
+ - Added functionality for user registration and data retrieval  
+ - Enabled auction creation and management for users  
+ - Implemented queries for retrieving user-related data and auction details  
+ - Set up real-time updates for auction prices  
 
 #### **Commit #6** : [Notification and Bid Management]
  - Integrated functionality for creating and managing notifications  
  - Added real-time updates for bid status and auction notifications  
  - Implemented bid notifications and user-specific notifications  
+
+#### **Commit #7** : [ShadCN Initialization and Navbar]
+ - Styled using Tailwind CSS  
+ - Integrated ShadCN UI components for enhanced UI consistency  
+ - Implemented reusable components to ensure consistent layout and responsive design
