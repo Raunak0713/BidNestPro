@@ -19,10 +19,18 @@ The BidNest is a web application built with Next.js, TypeScript, Convex, and Cle
 
 ## Progress 📊
 #### [ ✅ ] **Project Set Up**
--  [ ✅ ] Set Up NextJS TypeScript Project
+ - [ ✅ ] Set Up NextJS TypeScript Project
+#### [ ✅ ] **Authentication Set Up**
+ - [ ✅ ] Set Up Clerk Auth
+ - [ ✅ ] Custom Sign Up and Sign In Routes
+ 
   
 ## API References ⚙️
 
 ## Commits 📅
 - **Commit #1** : [Project Setup]
   - Initial setup of the Next.js project with TypeScript support.
+- **Commit #2** : [Authentication Setup]
+  - Integrated Clerk for secure user authentication
+  - Added custom Sign Up and Sign In routes
+  - Verified session management for Signed In Users
