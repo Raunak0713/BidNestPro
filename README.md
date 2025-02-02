@@ -59,6 +59,103 @@ BidNest is a web application built with Next.js, TypeScript, Convex, and Clerk, 
 
 ## API References ⚙️
 
+## User Queries and Mutations
+
+### 🚀 **CreateUser Mutation** 🚀
+
+#### **Description**:  
+Creates a new user in the database. Checks if the user already exists by **clerkId**, and if not, creates a new user and sends them a personalized notification.
+
+#### **Arguments**:
+- `name` (string) - The name of the user.  
+- `email` (string) - The user's email address.  
+- `clerkId` (string) - The **Clerk** user ID.  
+- `profileImg` (string, optional) - The URL of the user's profile image.
+
+#### **Response**:  
+- Returns the created user object.
+
+#### **Example**:
+```typescript
+const newUser = await createUser({
+  name: "John Doe",
+  email: "johndoe@example.com",
+  clerkId: "clerk-1234567890",
+  profileImg: "https://link-to-profile-img.com",
+});
+```
+### 🔍 **ExistingUser Query** 🔍
+
+#### **Description**:  
+Checks if a user exists by **clerkId** in the database.
+
+#### **Arguments**:
+- `clerkId` (string) - The **Clerk** user ID.
+
+#### **Response**:  
+- Returns `true` if the user exists, otherwise `false`.
+
+#### **Example**:
+```typescript
+const userExists = await existingUser({
+  clerkId: "clerk-1234567890",
+});
+```
+
+### 👤 **GetUserByClerkId Query** 👤
+
+#### **Description**:  
+Fetches a user from the database by their **clerkId**.
+
+#### **Arguments**:
+- `clerkId` (string) - The **Clerk** user ID.
+
+#### **Response**:  
+- Returns the user object if found, otherwise `null`.
+
+#### **Example**:
+```typescript
+const user = await getUserByClerkId({
+  clerkId: "clerk-1234567890",
+});
+```
+
+### 👥 **GetAllUsersExceptSelf Query** 👥
+
+#### **Description**:  
+Fetches all users from the database except the user identified by the provided **userId**.
+
+#### **Arguments**:
+- `userId` (id of users table) - The **_id** of the user to exclude.
+
+#### **Response**:  
+- Returns an array of user objects excluding the one with the provided **userId**.
+
+#### **Example**:
+```typescript
+const users = await getAllUsersByClerkExceptSelf({
+  userId: "users-id-123456",
+});
+```
+
+### 👥 **GetAllUsersByClerkExceptSelf Query** 👥
+
+#### **Description**:  
+Fetches all users from the database except the user identified by the provided **clerkId**.
+
+#### **Arguments**:
+- `clerkId` (string) - The **Clerk** user ID of the user to exclude.
+
+#### **Response**:  
+- Returns an array of user objects excluding the one with the provided **clerkId**.
+
+#### **Example**:
+```typescript
+const users = await getAllUsersExceptSelf({
+  clerkId: "clerk-1234567890",
+});
+```
+
 ## Commits 📅
 #### **Commit #1** : [Project Setup]
  - Initial setup of the Next.js project with TypeScript support.
@@ -94,3 +191,8 @@ BidNest is a web application built with Next.js, TypeScript, Convex, and Clerk, 
  - Styled using Tailwind CSS  
  - Integrated ShadCN UI components for enhanced UI consistency  
  - Implemented reusable components to ensure consistent layout and responsive design
+
+#### **Commit #8** : [User Query and Mutations Documentation]  
+- Added comprehensive documentation for user-related queries and mutations  
+- Provided detailed descriptions for **CreateUser Mutation**, **ExistingUser Query**, **GetUserByClerkId Query**, **GetAllUsersExceptSelf Query**, and **GetAllUsersByClerkExceptSelf Query**  
+- Included example usage for each operation and clarified argument and response details
