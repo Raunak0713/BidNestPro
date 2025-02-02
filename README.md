@@ -18,25 +18,36 @@ The BidNest is a web application built with Next.js, TypeScript, Convex, and Cle
 - **Clerk**: A secure user authentication and management service.
 
 ## Progress 📊
-#### [ ✅ ] **Project Set Up**
-   - [ ✅ ] Set Up NextJS TypeScript Project  
-#### [ ✅ ] **Authentication Set Up**
-   - [ ✅ ] Set Up Clerk Auth  
-   - [ ✅ ] Custom Sign Up and Sign In Routes  
-#### [ ✅ ] **Database Set Up**
-   - [ ✅ ] Set Up Convex Database  
-   - [ ✅ ] Configured schema for auction and bidding data  
-   - [ ✅ ] Optimized queries for fetching live bidding data  
-#### [ ✅ ] **Schema Set Up**
-   - [ ✅ ] Defined `users`, `auctions`, `bids`, and `notifications` tables 
-   - [ ✅ ] Added `index` on `bids` table for querying auction bids by amount efficiently
-#### [ ✅ ] **User Queries and Mutations**
-   - [ ✅ ] Create User  
-   - [ ✅ ] Check Existing User  
-   - [ ✅ ] Get User with ClerkID  
-   - [ ✅ ] Get All Users Except the Self  
-   - [ ✅ ] Get All Users by ClerkID Except the Self  
-
+#### **Project Set Up**
+ - [ ✅ ] Set Up NextJS TypeScript Project  
+#### **Authentication Set Up**
+ - [ ✅ ] Set Up Clerk Auth  
+ - [ ✅ ] Custom Sign Up and Sign In Routes  
+#### **Database Set Up**
+ - [ ✅ ] Set Up Convex Database  
+ - [ ✅ ] Configured schema for auction and bidding data  
+ - [ ✅ ] Optimized queries for fetching live bidding data  
+#### **Schema Set Up**
+ - [ ✅ ] Defined `users`, `auctions`, `bids`, and `notifications` tables 
+ - [ ✅ ] Added `index` on `bids` table for querying auction bids by amount efficiently
+#### **User Queries and Mutations**
+ - [ ✅ ] Create User  
+ - [ ✅ ] Check Existing User  
+ - [ ✅ ] Get User with ClerkID  
+ - [ ✅ ] Get All Users Except the Self  
+ - [ ✅ ] Get All Users by ClerkID Except the Self  
+#### **Auction Queries and Mutations**
+ - [ ✅ ] Create Auctions  
+ - [ ✅ ] Get All Users Auctions By ClerkID  
+ - [ ✅ ] Get All Auctions  
+ - [ ✅ ] Get Current Price of Auction  
+ - [ ✅ ] Get AuctionID  
+ - [ ✅ ] Get Auction By ID  
+#### **Notification Queries and Mutations**
+ - [ ✅ ] Create Notifications  
+ - [ ✅ ] Get All Notifications By Clerk ID  
+ - [ ✅ ] Delete Notification By ID  
+ - [ ✅ ] Create Auction Notification  
 
 ## API References ⚙️
 
@@ -60,8 +71,13 @@ The BidNest is a web application built with Next.js, TypeScript, Convex, and Cle
  - Added `index` on `bids` table for querying auction bids by amount efficiently  
  - Integrated notifications for bid status and user engagement  
 
-#### ** Commut #5** : [User and Auction Management]
+#### **Commit #5** : [User and Auction Management]
  - Added functionality for user registration and data retrieval
  - Enabled auction creation and management for users
  - Implemented queries for retrieving user-related data and auction details
  - Set up real-time updates for auction prices
+
+#### **Commit #6** : [Notification and Bid Management]
+ - Integrated functionality for creating and managing notifications  
+ - Added real-time updates for bid status and auction notifications  
+ - Implemented bid notifications and user-specific notifications  

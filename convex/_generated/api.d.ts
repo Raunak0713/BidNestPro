@@ -14,6 +14,8 @@ import type {
   FunctionReference,
 } from "convex/server";
 import type * as auction from "../auction.js";
+import type * as bid from "../bid.js";
+import type * as notification from "../notification.js";
 import type * as user from "../user.js";
 
 /**
@@ -26,6 +28,8 @@ import type * as user from "../user.js";
  */
 declare const fullApi: ApiFromModules<{
   auction: typeof auction;
+  bid: typeof bid;
+  notification: typeof notification;
   user: typeof user;
 }>;
 export declare const api: FilterApi<
