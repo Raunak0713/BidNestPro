@@ -19,17 +19,24 @@ The BidNest is a web application built with Next.js, TypeScript, Convex, and Cle
 
 ## Progress 📊
 #### [ ✅ ] **Project Set Up**
- - [ ✅ ] Set Up NextJS TypeScript Project  
+   - [ ✅ ] Set Up NextJS TypeScript Project  
 #### [ ✅ ] **Authentication Set Up**
- - [ ✅ ] Set Up Clerk Auth  
- - [ ✅ ] Custom Sign Up and Sign In Routes  
+   - [ ✅ ] Set Up Clerk Auth  
+   - [ ✅ ] Custom Sign Up and Sign In Routes  
 #### [ ✅ ] **Database Set Up**
- - [ ✅ ] Set Up Convex Database  
- - [ ✅ ] Configured schema for auction and bidding data  
- - [ ✅ ] Optimized queries for fetching live bidding data  
+   - [ ✅ ] Set Up Convex Database  
+   - [ ✅ ] Configured schema for auction and bidding data  
+   - [ ✅ ] Optimized queries for fetching live bidding data  
 #### [ ✅ ] **Schema Set Up**
- - [ ✅ ] Defined `users`, `auctions`, `bids`, and `notifications` tables 
- - [ ✅ ] Added `index` on `bids` table for querying auction bids by amount efficiently
+   - [ ✅ ] Defined `users`, `auctions`, `bids`, and `notifications` tables 
+   - [ ✅ ] Added `index` on `bids` table for querying auction bids by amount efficiently
+#### [ ✅ ] **User Queries and Mutations**
+   - [ ✅ ] Create User  
+   - [ ✅ ] Check Existing User  
+   - [ ✅ ] Get User with ClerkID  
+   - [ ✅ ] Get All Users Except the Self  
+   - [ ✅ ] Get All Users by ClerkID Except the Self  
+
 
 ## API References ⚙️
 
@@ -52,3 +59,9 @@ The BidNest is a web application built with Next.js, TypeScript, Convex, and Cle
  - Defined schema for `users`, `auctions`, `bids`, and `notifications`  
  - Added `index` on `bids` table for querying auction bids by amount efficiently  
  - Integrated notifications for bid status and user engagement  
+
+#### ** Commut #5** : [User and Auction Management]
+ - Added functionality for user registration and data retrieval
+ - Enabled auction creation and management for users
+ - Implemented queries for retrieving user-related data and auction details
+ - Set up real-time updates for auction prices
