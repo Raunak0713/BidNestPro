@@ -25,8 +25,11 @@ The BidNest is a web application built with Next.js, TypeScript, Convex, and Cle
  - [ ✅ ] Custom Sign Up and Sign In Routes  
 #### [ ✅ ] **Database Set Up**
  - [ ✅ ] Set Up Convex Database  
- - [ ✅ ] Configured secure schema for auction and bidding data
+ - [ ✅ ] Configured schema for auction and bidding data  
  - [ ✅ ] Optimized queries for fetching live bidding data  
+#### [ ✅ ] **Schema Set Up**
+ - [ ✅ ] Defined `users`, `auctions`, `bids`, and `notifications` tables 
+ - [ ✅ ] Added `index` on `bids` table for querying auction bids by amount efficiently
 
 ## API References ⚙️
 
@@ -44,3 +47,8 @@ The BidNest is a web application built with Next.js, TypeScript, Convex, and Cle
  - Set up a production environment  
  - Designed schema for auctions and bids  
  - Ensured real-time updates for bid changes  
+
+#### **Commit #4** : [Database Schema Setup]
+ - Defined schema for `users`, `auctions`, `bids`, and `notifications`  
+ - Added `index` on `bids` table for querying auction bids by amount efficiently  
+ - Integrated notifications for bid status and user engagement  
