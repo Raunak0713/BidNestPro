@@ -1,24 +1,36 @@
+"use client";
+
+import { useEffect } from "react";
+import { useMutation, useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
-import { currentUser } from "@clerk/nextjs/server";
-import { redirect } from "next/navigation";
-import { fetchMutation, fetchQuery } from "convex/nextjs";
+import { useUser } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
 
-const page = async () => {
-  const user = await currentUser();
-  if (!user || !user.id) throw new Error("User not defined");
-  
-  const existingUser = await fetchQuery(api.user.getUserByClerkId, { clerkId: user.id });
+const Page = () => {
+  const { user } = useUser();
+  const router = useRouter();
+  const createUser = useMutation(api.user.createUser);
+  const existingUser = useQuery(api.user.getUserByClerkId, { clerkId: user?.id as string });
 
-  if (!existingUser) {
-    await fetchMutation(api.user.createUser, {
-      name: `${user.firstName || ""}`,
-      email: user.emailAddresses[0].emailAddress,
-      clerkId: user.id,
-      profileImg: user.imageUrl || "",
-    });
-  }
+  useEffect(() => {
+    const syncUser = async () => {
+      if (!user) return;
 
-  return redirect("/");
+      if (!existingUser) {
+        await createUser({
+          name: user.firstName || "",
+          email: user.emailAddresses[0]?.emailAddress || "",
+          clerkId: user.id,
+          profileImg: user.imageUrl || "",
+        });
+      }
+      router.push("/");
+    };
+
+    syncUser();
+  }, [user, existingUser, createUser, router]);
+
+  return null;
 };
 
-export default page;
+export default Page;

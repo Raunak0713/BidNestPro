@@ -59,7 +59,9 @@ BidNest is a web application built with Next.js, TypeScript, Convex, and Clerk, 
 #### **Onboarding and Auctions Route**
  - [ ✅ ] Onboarding Route Synchronizes Clerk user data with the database.
  - [ ✅ ] Auctions Route Displays all available auctions for user exploration.
-
+#### **Bidding History and My Bids Route**
+ - [ ✅ ] Created a comprehensive Bidding History page for users to track past bids.
+ - [ ✅ ] Implemented My Bids route for personalized bid management.
 # API References ⚙️
 
 ## User Queries and Mutations
@@ -203,3 +205,8 @@ const users = await getAllUsersExceptSelf({
 #### **Commit #9** : [Onboarding Route and All Auctions Route]
 - Onboarding Route Syncs Clerk user data with the database for seamless user integration.
 - Auctions Route: Displays all available auctions, allowing users to explore current listings.
+
+#### **Commit #10** : [Bidding History, My Bids Route, Auction Route]
+- Created a dedicated Bidding History page to allow users to view detailed records of their past bids.
+- Developed the My Bids route to provide a personalized view of a user's ongoing and past bids for better management.
+- Implemented the Auction Route to display available auctions and facilitate bid placement in real-time.
