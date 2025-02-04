@@ -56,8 +56,11 @@ BidNest is a web application built with Next.js, TypeScript, Convex, and Clerk, 
  - [ ✅ ] Initialized ShadCN UI components  
  - [ ✅ ] Integrated responsive UI design with Tailwind CSS  
  - [ ✅ ] Implemented mobile-first design using ShadCN UI components for consistency across devices
+#### **Onboarding and Auctions Route**
+ - [ ✅ ] Onboarding Route Synchronizes Clerk user data with the database.
+ - [ ✅ ] Auctions Route Displays all available auctions for user exploration.
 
-## API References ⚙️
+# API References ⚙️
 
 ## User Queries and Mutations
 
@@ -196,3 +199,7 @@ const users = await getAllUsersExceptSelf({
 - Added comprehensive documentation for user-related queries and mutations  
 - Provided detailed descriptions for **CreateUser Mutation**, **ExistingUser Query**, **GetUserByClerkId Query**, **GetAllUsersExceptSelf Query**, and **GetAllUsersByClerkExceptSelf Query**  
 - Included example usage for each operation and clarified argument and response details
+
+#### **Commit #9** : [Onboarding Route and All Auctions Route]
+- Onboarding Route Syncs Clerk user data with the database for seamless user integration.
+- Auctions Route: Displays all available auctions, allowing users to explore current listings.

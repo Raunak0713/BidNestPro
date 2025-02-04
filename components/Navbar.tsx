@@ -36,7 +36,7 @@ const Navbar = () => {
         {user ? (
           <>
             <div className="md:flex gap-4 hidden md:gap-5">
-              <Button onClick={() => router.push('/all-auctions')} className="transition-all bg-white text-black hover:bg-white px-6 py-2 rounded-lg border-red-500 border-l-2 border-t-2 border-b-[4px] border-r-2 hover:border-r-4 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:translate-y-[2px]">
+              <Button  onClick={() => router.push('/all-auctions')} className="transition-all bg-white text-black hover:bg-white px-6 py-2 rounded-lg border-red-500 border-l-2 border-t-2 border-b-[4px] border-r-2 hover:border-r-4 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:translate-y-[2px]">
                 All Auctions
               </Button>
               <Button onClick={() => router.push('/my-bids')} className="transition-all bg-white text-black hover:bg-white px-6 py-2 rounded-lg border-red-500 border-l-2 border-t-2 border-b-[4px] border-r-2 hover:border-r-4 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:translate-y-[2px]">
@@ -58,7 +58,11 @@ const Navbar = () => {
               <div className="hidden md:flex mt-0.5">
                 {/* <PopoverPage /> */}
               </div>
-              <UserButton />
+              <UserButton appearance={{
+                elements : {
+                  avatarBox : 'w-8 h-8'
+                }
+              }}/>
             </div>
             <div className="flex md:hidden">
               {/* <PopoverPage /> */}
@@ -66,7 +70,7 @@ const Navbar = () => {
             <div className="md:hidden">
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
-                  <Button>
+                  <Button variant={"outline"}>
                     <Menu />
                   </Button>
                 </SheetTrigger>
