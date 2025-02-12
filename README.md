@@ -62,6 +62,9 @@ BidNest is a web application built with Next.js, TypeScript, Convex, and Clerk, 
 #### **Bidding History and My Bids Route**
  - [ ✅ ] Created a comprehensive Bidding History page for users to track past bids.
  - [ ✅ ] Implemented My Bids route for personalized bid management.
+#### **Integrated Upload Feature and Implemented In-Built Notification System**
+- [ ✅ ] Integrated the Upload feature to allow users to add images while creating an auction.
+- [ ✅ ] Implemented a robust in-built notification system for delivering personalized notifications to users.
 # API References ⚙️
 
 ## User Queries and Mutations
@@ -210,3 +213,8 @@ const users = await getAllUsersExceptSelf({
 - Created a dedicated Bidding History page to allow users to view detailed records of their past bids.
 - Developed the My Bids route to provide a personalized view of a user's ongoing and past bids for better management.
 - Implemented the Auction Route to display available auctions and facilitate bid placement in real-time.
+
+#### **Commit #11** : [Upload Thing Feature, In-Built Notification System]
+- Integrated Upload feature to enable users to add images during auction creation.
+- Developed an in-built notification system for sending personalized user notifications.
+- Enhanced user experience by providing real-time alerts and updates through notifications.

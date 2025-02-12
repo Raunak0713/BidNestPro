@@ -6,7 +6,7 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 import { Menu } from "lucide-react"
 import Image from "next/image"
-// import PopoverPage from "./NotiPopover"
+import PopoverPage from "./NotiPopover"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 
@@ -56,7 +56,7 @@ const Navbar = () => {
           <div className="flex items-center gap-3 md:gap-4">
             <div className="flex items-center gap-7">
               <div className="hidden md:flex mt-0.5">
-                {/* <PopoverPage /> */}
+                <PopoverPage />
               </div>
               <UserButton appearance={{
                 elements : {
@@ -65,7 +65,7 @@ const Navbar = () => {
               }}/>
             </div>
             <div className="flex md:hidden">
-              {/* <PopoverPage /> */}
+              <PopoverPage />
             </div>
             <div className="md:hidden">
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
