@@ -19,7 +19,7 @@
     "clsx": "^2.1.1",
     "convex": "^1.18.2",
     "lucide-react": "^0.474.0",
-    "next": "15.1.6", 
+    "next": "15.1.6",
     "next-themes": "^0.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -29,6 +29,7 @@
     "uploadthing": "^7.5.0"
   },
   "overrides": {
+    "uploadthing": "7.0.0",
     "@uploadthing/react": {
       "react": "18.2.0",
       "react-dom": "18.2.0"
